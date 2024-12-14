@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="flex h-screen">
+        <div class="bg-gray-800 text-white w-16 h-full p-4 flex flex-col">
+            <h2 class="text-xl font-semibold mb-6">Sidebar</h2>
+            <ul class="space-y-4">
+                <li><a href="#" class="hover:text-gray-400">H</a></li>
+                <li><a href="#" class="hover:text-gray-400">P</a></li>
+                <li><a href="#" class="hover:text-gray-400">S</a></li>
+                <li><a href="#" class="hover:text-gray-400">L</a></li>
+            </ul>
+        </div>
+
+
+        <div class="flex-1 flex flex-col bg-red-600">
+
+
+            <div class="bg-gray-800 text-white p-4 flex justify-between items-center">
+                <div class="text-xl font-semibold">Dashboard</div>
+                <div class="space-x-4">
+                    <button class="text-white">Profile</button>
+                    <button class="text-white">Logout</button>
+                </div>
+            </div>
+
+            <!-- Main content area -->
+            <div class="flex-1 p-6">
+                <h1 class="text-3xl font-bold text-gray-800">Dashboard Content</h1>
+                <p class="text-gray-600 mt-4">This is the content section. You can add your components here.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <div>
+
+    import React from 'react';
+
+const App = () => {
+  return (
+    <div className="flex h-screen">
+
+
+      <div className="bg-gray-800 text-white w-17 h-full p-4 flex flex-col">
+        <h2 className="text-xl font-semibold mb-6 pt-2">Sidebar</h2>
+        <ul className="space-y-4 text-center flex-grow">
+          <li><a href="" className="hover:text-gray-400">H</a></li>
+          <li><a href="" className="hover:text-gray-400">P</a></li>
+          <li><a href="" className="hover:text-gray-400">S</a></li>
+          <li><a href="" className="hover:text-gray-400">L</a></li>
+        </ul>
+
+        <ul className='space-y-4 text-center'>
+          <li>o</li>
+        </ul>
+      </div>
+
+
+      <div className="flex-1 flex flex-col">
+        <div className="bg-gray-800 text-white p-6 flex flex-col sm:flex-row justify-between items-center">
+          <div className="text-xl font-semibold sm:w-auto">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="pl-10 py-1 pr-4 w-full bg-gray-600 rounded-lg text-white outline-none"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0v3m0 4v4"
+                />
+              </svg>
+            </div>
+          </div>
+
+
+          <div className="space-x-4 flex items-center mt-2 sm:mt-0">
+            <button className="flex items-center text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 6h12M16 6l4 4m0 0l-4 4m4-4H10m0 0v12m0 0H4"
+                />
+              </svg>
+            </button>
+
+            <button className="flex items-center text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 8c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.87 0-7 3.13-7 7s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7z"
+                />
+              </svg>
+            </button>
+
+            <button className="flex items-center text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 20h9M12 4h9M12 12h9M12 16h9"
+                />
+              </svg>
+            </button>
+
+            <button className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden">
+              <img
+                src="/logo192.png"
+                alt="User Profile"
+                className="w-[50%] h-[50%] object-cover"
+              />
+            </button>
+
+          </div>
+        </div>
+
+
+        <div className="flex-1 p-6">
+          <h1 className="text-3xl font-bold text-gray-800">Dashboard Content</h1>
+          <p className="text-gray-600 mt-4">  lorem1p This is the content section. You can add your components here.</p>
+        </div>
+
+      </div>
+
+    </div>
+  );
+};
+
+export default App;
+
+
+  </div> -->
+
+</body>
+
+</html>
