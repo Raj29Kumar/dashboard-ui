@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import Contant from "../components/Contant";
+import Contant from "./Content/Contant";
 
 const Dashboard = () => {
  return(

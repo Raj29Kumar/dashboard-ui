@@ -1,11 +1,116 @@
 import React from "react";
+import Tcard from "./components/Tcard";
+
+
+const cardData = [
+    {
+        id: 1,
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-blue-500"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8zm-1-13h2v5h-2zm0 6h2v2h-2z"
+                />
+            </svg>
+        ),
+        title: "Total Order",
+        value: "$49.99",
+        percentage: -3,
+    },
+    {
+        id: 2,
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-green-500"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8zm-1-13h2v5h-2zm0 6h2v2h-2z"
+                />
+            </svg>
+        ),
+        title: "Revenue",
+        value: "$199.99",
+        percentage: 5,
+    },
+    {
+        id: 3,
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-yellow-500"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8zm-1-13h2v5h-2zm0 6h2v2h-2z"
+                />
+            </svg>
+        ),
+        title: "Users",
+        value: "120",
+        percentage: 10,
+    },
+    {
+        id: 4,
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-red-500"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8zm-1-13h2v5h-2zm0 6h2v2h-2z"
+                />
+            </svg>
+        ),
+        title: "Pending Orders",
+        value: "15",
+        percentage: -2,
+    },
+];
+
 
 const Contant = () => {
     return (
         <>
             <div className="flex-1 p-6 pl-10 mt-20 relative overflow-auto bg-black scrollbar-hide h-full">
                 <div className='absolute top-8 left-6 right-6 bottom-4 overflow-y-auto scrollbar-hide'>
-                    <h1 className="text-3xl font-bold mt-24 md:mt-5 sm:mt-3 text-white">Dashboard Content</h1>
+                    <h1 className="text-3xl font-bold mt-16 md:mt-0 sm:mt-0 text-white">Dashboard Content</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-3 pt-4 pr-4">
+                        <div className="bg-gray-100 text-white p-2 rounded-md">
+                            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-fr">
+                                {cardData.map((card) => (
+                                    <Tcard
+                                        key={card.id}
+                                        icon={card.icon}
+                                        title={card.title}
+                                        value={card.value}
+                                        percentage={card.percentage}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="bg-gray-500 text-white p-4 rounded-md">
+                            <div  class></div>
+                            <h2 className="text-xl font-bold">Column 2 (30%)</h2>
+                            <p>This is the content for the second column.</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
                     <p className="text-gray-600 overflow mt-4">Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod faucibus ex, sit amet iaculis diam accumsan sed. Donec dolor sem, posuere non sagittis in, sodales quis erat. Aliquam tincidunt suscipit neque, nec tempus urna condimentum ac. Suspendisse pulvinar arcu non libero posuere rhoncus. Quisque est mauris, porta et nulla nec, tempus aliquet sapien. Aenean tristique venenatis ante vel cursus. Ut pulvinar dolor vel nisl dignissim, pellentesque porttitor leo egestas.
 
                         Nulla facilisi. Quisque facilisis porttitor orci, ultrices hendrerit tellus tempus at. Donec rhoncus placerat massa sit amet congue. Integer sit amet sem imperdiet, posuere purus ut, varius sem. Suspendisse eget porta risus. Sed nibh metus, faucibus et turpis eu, hendrerit malesuada augue. Mauris elementum tempus libero, vel blandit odio porttitor sit amet. Nulla auctor est sed orci vestibulum suscipit. Donec luctus semper lectus, nec interdum ante gravida vel. Vivamus dictum facilisis mattis.

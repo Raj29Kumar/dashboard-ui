@@ -1,4 +1,4 @@
-import { FaHome, FaChartPie, FaBell, FaUser } from 'react-icons/fa';
+import React from "react";
 
 const Sidebar = () => (
   <div className="bg-gray-800 text-white w-20 h-full text-center p-4 flex flex-col fixed top-0 left-0">
