@@ -184,7 +184,7 @@ const Contant = () => {
                                                 </svg>
 
                                             </button>
-                                            <p className="text-lg font-medium ml-6 text-white">Popular Dishes</p>
+                                            <p className="text-lg font-medium ml-6 text-white">Popular</p>
                                         </div>
 
                                         <button className="w-10 h-10 flex items-center justify-center bg-gray-700 text-gray-600 rounded-full shadow-md hover:bg-gray-300">
